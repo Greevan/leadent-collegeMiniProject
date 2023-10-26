@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navBar {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 24, 24);
+}
+
+.userIcon {
+    width: 100px;
+    height: auto;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+  .navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 4.5vw;
+  }
+
+.testCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90vw;
+    height: 55vw;
+    border-radius: 10px;
+    border: 1px solid #a9a9a9;
+    margin-top: 20px;
+  }
+
+  .testCardWrap1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 25px;
+  }
+
+  .testCardWrap2 p {
+    font-size: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ff6767;
+    width: 80vw;
+    height: 10vw;
+    border-radius: 10px;
+    color: #f2f2f2;
+  }
+
+  .testDet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .testName {
+    font-size: 5.5vw;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  .dueDate, .attendedCount{
+    font-size: 4.5vw;
+  }
+
+  .testImg {
+    width: 18vw;
+   }
+
+   .loginButton {
+    width: 70vw;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.buttonDiv {
+    margin: 0 auto;
+}

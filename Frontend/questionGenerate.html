@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generation</title>
+    <link rel="stylesheet" href="questionGenerate.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navBar">
+        <a href="./index.html"><img class="userIcon" src="./Assets/user.png" alt="User"></a>
+    </div>
+
+    <div class="generation">
+        <form action="http://localhost:3000/generate-quiz/">
+
+            <label class="loginTitle" for="">Test Name</label>
+            <input class="input" type="text" name="testName" required><br><br><br>
+
+            <label class="loginTitle" for="">Course Name</label>
+            <input class="input" type="text" name="course" required><br>
+
+            <label class="loginTitle" for="">Number of Questions</label>
+            <input class="input" type="number" name="noOfQuestions" required><br>
+
+            <label class="loginTitle" for="">Number of Choices</label>
+            <input class="input" type="number" name="noOfOptions" required><br>
+
+            <label class="loginTitle" for="difficulty">Difficulty Level</label>
+            <select class="inputSelect" name="difficulty" id="difficulty" required>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select><br>
+            
+
+            <label class="loginTitle" for="">Syllabus <i>(Optional)</i></label>
+            <textarea class="syllabusField" name="syllabus" id="" cols="30" rows="10"></textarea>
+
+            <div class="buttonDiv"><a href="./quizGenerated.html"><button type="submit" class="loginButton">Generate Quiz</button></a></div>
+
+        </form>
+    </div>
+    
+</body>
+</html>

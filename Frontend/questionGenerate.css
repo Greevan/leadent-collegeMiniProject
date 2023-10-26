@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navBar {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 24, 24);
+}
+
+.userIcon {
+    width: 100px;
+    height: auto;
+}
+
+
+.input {
+    font-family: 'Alegreya Sans', sans-serif;
+    height: 30px;
+    margin-top: 6px;
+    font-size: 4.2vw;
+    padding: 5px;
+}
+
+.syllabusField {
+    font-family: 'Alegreya Sans', sans-serif;
+    margin-top: 6px;
+    font-size: 4.2vw;
+    padding: 5px;
+}
+
+.inputSelect {
+    font-family: 'Alegreya Sans', sans-serif;
+    height: 45px;
+    margin-top: 6px;
+    font-size: 4.2vw;
+    padding: 5px;
+}
+
+.generation {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 85vw;
+}
+
+.loginTitle {
+    font-size: 4.5vw;
+    margin-top: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+}
+
+.loginButton {
+    width: 50vw;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.buttonDiv {
+    margin: 0 auto;
+}

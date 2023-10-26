@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="testDetails.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navBar">
+        <a href="./index.html"><img class="userIcon" src="./Assets/user.png" alt="User"></a>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar-links" id="navbar-links">
+          <a href="#">Home</a>
+          <a href="#">Performance</a>
+          <a href="#">Profile</a>
+        </div>
+    </div>
+
+    <div id="tests">
+
+        <!-- <div class="testCard">
+            <div class="testCardWrap1">
+                <img class="testImg" src="./Assets/test.png" alt="">
+                <div class="testDet">
+                    <p class="testName">Test Name</p>
+                    <p class="dueDate">Due in 3 days</p>
+                    <p class="attendedCount">45 Attended</p>
+                </div>
+            </div>
+
+            <div class="testCardWrap2">
+                <div class="buttonDiv"><a href="./quiz.html"><button class="loginButton">Attend Test</button></a></div>
+            </div>
+        </div> -->
+    </div>
+
+</body>
+<script>
+
+fetch('http://localhost:3000/getExams')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                const testsContainer = document.getElementById('tests');
+
+                // Iterate through the exams data
+                data.forEach(exam => {
+                    const examCard = document.createElement('div');
+                    examCard.classList.add('testCard');
+
+                    const cardWrap1 = document.createElement('div');
+                    cardWrap1.classList.add('testCardWrap1');
+
+                    // Add an image to the card (you can replace 'test.png' with the actual image URL)
+                    const testImg = document.createElement('img');
+                    testImg.classList.add('testImg');
+                    testImg.src = './Assets/test.png';
+                    testImg.alt = '';
+
+                    // Extract exam details
+                    const testName = exam.testName;
+                    const dueDate = 'Timing 45 Minutes'; // You can calculate the due date as needed
+                    const attendedCount = `Total ${exam.noOfQuestions} questions`;
+
+                    // Create elements for exam details
+                    const testDet = document.createElement('div');
+                    testDet.classList.add('testDet');
+                    const testNameElement = document.createElement('p');
+                    testNameElement.classList.add('testName');
+                    testNameElement.textContent = testName;
+                    const dueDateElement = document.createElement('p');
+                    dueDateElement.classList.add('dueDate');
+                    dueDateElement.textContent = dueDate;
+                    const attendedCountElement = document.createElement('p');
+                    attendedCountElement.classList.add('attendedCount');
+                    attendedCountElement.textContent = attendedCount;
+
+                    testDet.appendChild(testNameElement);
+                    testDet.appendChild(dueDateElement);
+                    testDet.appendChild(attendedCountElement);
+
+                    cardWrap1.appendChild(testImg);
+                    cardWrap1.appendChild(testDet);
+
+                    const cardWrap2 = document.createElement('div');
+                    cardWrap2.classList.add('testCardWrap2');
+
+                    // Create a button to attend the test
+                    const buttonDiv = document.createElement('div');
+                    buttonDiv.classList.add('buttonDiv');
+                    const attendButton = document.createElement('a');
+                    attendButton.href = `./quiz.html?id=${exam._id}`; // Replace with the actual URL
+                    const loginButton = document.createElement('button');
+                    loginButton.classList.add('loginButton');
+                    loginButton.textContent = 'Attend Test';
+                    attendButton.appendChild(loginButton);
+                    buttonDiv.appendChild(attendButton);
+
+                    cardWrap2.appendChild(buttonDiv);
+
+                    examCard.appendChild(cardWrap1);
+                    examCard.appendChild(cardWrap2);
+
+                    testsContainer.appendChild(examCard);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+
+</script>
+</html>

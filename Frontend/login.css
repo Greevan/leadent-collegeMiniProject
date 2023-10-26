@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navBar {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 24, 24);
+}
+
+.userIcon {
+    width: 100px;
+    height: auto;
+}
+
+.loginImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    height: auto;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+
+.login {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    width: 70vw;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.login h2 {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    margin-top: 10px;
+    /* margin-bottom: 0px; */
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.loginTitle {
+    font-size: 4.5vw;
+    margin-top: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+}
+
+.input {
+    font-family: 'Alegreya Sans', sans-serif;
+    height: 30px;
+    margin-top: 6px;
+    font-size: 4.2vw;
+    padding: 5px;
+}
+
+.loginButton {
+    width: 50vw;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.buttonDiv {
+    margin: 0 auto;
+}
