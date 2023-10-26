@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const axios = require('axios')
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = [Your API KEY];
 const mongoose = require('mongoose')
 const cors = require('cors')
 mongoose.connect("mongodb+srv://dharan731:Asdfgh2014@cluster0.dcvhczd.mongodb.net/?retryWrites=true&w=majority").then(() => {
